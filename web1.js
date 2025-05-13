@@ -143,7 +143,7 @@ function handleMessageInput() {
 
 function pageload(pg) {
   const loadingIndicator = document.createElement("div");
-  loadingIndicator.textContent = "Loading...";
+  loadingIndicator.textContent = "Loading..";
   document.getElementById("content").appendChild(loadingIndicator);
 
    fetch(pg)
