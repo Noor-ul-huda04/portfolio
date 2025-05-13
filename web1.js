@@ -1,17 +1,17 @@
  
- function setActiveLink(event) {
+ function setActiveLink(e) {
   const navlinks = document.querySelectorAll(".nav1 a");
   navlinks.forEach(link => {
     link.classList.remove("active");
   });
-  event.target.classList.add("active");
+  e.target.classList.add("active");
 
   const navContainers = document.querySelectorAll(".nav1");
   navContainers.forEach(container => {
     container.classList.remove("active");
   });
 
-  const parentNavContainer = event.target.closest(".nav1");
+  const parentNavContainer = e.target.closest(".nav1");
   if (parentNavContainer) {
     parentNavContainer.classList.add("active");
   }
@@ -70,7 +70,7 @@ function validateEmail(email) {
   }
 }
 
-function handleFormSubmit(event) {
+function handleFormSubmit(e) {
   const name = document.querySelector("#name").value.trim();
   const email = document.querySelector("#email").value.trim();
 
@@ -85,7 +85,7 @@ function handleFormSubmit(event) {
   }
 
   if (!valid) {
-    event.preventDefault();
+    e.preventDefault();
   }
 }
 
